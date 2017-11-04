@@ -17,11 +17,8 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/users', 'UserController@index');
-
-
     Route::get('/conversations', 'ConversationController@index');
     Route::post('/conversations', 'ConversationController@createConversation');
-
     Route::get('/chat/{conversation_id}', 'ChatController@index');
     Route::get('/conversations/{conversation_id}', 'ChatController@fetchMessages');
     Route::post('/messages', 'ChatController@sendMessage');

@@ -16,6 +16,6 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
 });
 
 
-Broadcast::channel('chatroom', function ($user) {
+Broadcast::channel('my-chat', function ($user) {
     return $user;
 });

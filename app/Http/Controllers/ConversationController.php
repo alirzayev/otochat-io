@@ -24,7 +24,7 @@ class ConversationController extends Controller
             ->whereIn('receiver_id', [$request->get('id'), Auth::id()])
             ->first(); // Get conv. data
 
-        //  check user conversation
+        //  check the conversation beyween users
         if ($conversation) {
             // if exists return conversation
             return response()->json(['error' => false, 'conversation' => $conversation]);

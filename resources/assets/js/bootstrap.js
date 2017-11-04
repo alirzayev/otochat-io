@@ -37,11 +37,11 @@ window.axios.defaults.headers.common = {
  */
 
 import Echo from "laravel-echo"
-window.Pusher = require('pusher-js');
+
+window.io = require('socket.io-client');
 
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'b613157f365231300267',
-    cluster: 'eu',
-    encrypted: true
+    broadcaster: 'socket.io',
+    host: window.location.hostname + ':6001'
 });
+

@@ -25,16 +25,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function conversations()
     {
         return $this->belongsToMany(Conversation::class);
     }
 
-    public function inConversation()
-    {
-        return $this->belongsToMany(Conversation::class, 'receiver_id');
-    }
-
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function messages()
     {
         return $this->hasMany(Message::class);

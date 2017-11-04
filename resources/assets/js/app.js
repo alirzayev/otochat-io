@@ -70,17 +70,20 @@ const app = new Vue({
         // get users
         this.getUsers()
 
-        Echo.join('chatroom')
+        window.Echo.join('my-chat')
             .here((users) => {
                 this.usersInRoom = users;
+                console.log('users object')
             })
             .joining((user) => {
+                console.log('user object', user)
                 this.usersInRoom.push(user);
             })
             .leaving((user) => {
                 this.usersInRoom = this.usersInRoom.filter(u => u != user)
             })
             .listen('MessagePosted', (e) => {
+                console.log('event object')
                 this.messages.push({
                     message: e.message.message,
                     user: e.user
