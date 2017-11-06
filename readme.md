@@ -4,6 +4,7 @@ It is a simple one to one chat application with socket.io, redis and laravel-ech
 # Installation
 before installation make sure your redis server is working well
 ```bash
+$ git clone https://github.com/alirzayev/otochat-io.git
 $ composer install
 $ npm install
 $ php artisan migrate
