@@ -4,18 +4,27 @@
   "authHost": "http://localhost:8000",
   "database": "redis",
   "databaseConfig": {
-    "redis": {},
+    "redis": {
+      "port": "6379",
+      "host": "95.85.46.165"
+    },
     "sqlite": {
       "databasePath": "/database/laravel-echo-server.sqlite"
     }
   },
   "devMode": true,
-  "host": "localhost",
+  "host": null,
   "port": "6001",
   "protocol": "ws",
   "referrers": [],
   "sslCertPath": "",
   "sslKeyPath": "",
+  "apiOriginAllow": {
+    "allowCors": true,
+    "allowOrigin": "*",
+    "allowMethods": "GET, POST",
+    "allowHeaders": "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
+  },
   "verifyAuthPath": true,
   "verifyAuthServer": false
 }

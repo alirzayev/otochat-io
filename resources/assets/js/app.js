@@ -66,7 +66,6 @@ const app = new Vue({
         this.$bus.$on('messagesent', this.addMessage)
         this.$bus.$on('getconvmessages', this.getConersationMessages)
 
-
         // get users
         this.getUsers()
 
@@ -87,7 +86,7 @@ const app = new Vue({
                 this.messages.push({
                     message: e.message.message,
                     user: e.user
-                });
-            });
+                })
+            })
     }
 });

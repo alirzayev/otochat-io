@@ -8,6 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
     <title>{{ config('app.name', 'Chatoto') }}</title>
 
     <!-- Styles -->
@@ -78,8 +79,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 <script src="//{{ Request::getHost() }}:6001/socket.io/socket.io.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
