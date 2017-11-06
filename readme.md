@@ -16,9 +16,10 @@ $ npm install -g laravel-echo-server
 
 ```bash
 $ laravel-echo-server init 
-$ npm run watch
 $ laravel-echo-server start
+$ npm run watch
 $ php artisan serve
+$ php artisan queue:work
 ```
 All is done, check  <http://myproject/conversations>  
 from browser.
